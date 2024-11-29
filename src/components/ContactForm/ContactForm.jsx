@@ -55,7 +55,6 @@ export default function ContactForm({ onAddContact }) {
             <Field type="text" name="name" id="name" />
             <ErrorMessage name="name" component="span" />
           </div>
-
           <div>
             <label htmlFor="number">Number</label>
             <Field
@@ -66,7 +65,6 @@ export default function ContactForm({ onAddContact }) {
             />
             <ErrorMessage name="number" component="span" />
           </div>
-
           <button type="submit">Add Contact</button>
         </Form>
       )}

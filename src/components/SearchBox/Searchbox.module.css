@@ -3,6 +3,6 @@ input {
   border-radius: 5px;
 }
 
-div {
-  margin: 15px;
+.searchContainer {
+  border: 8px solid #a2a2a2;
 }
