@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import PropTypes from "prop-types";
-import "./ContactForm.module.css";
+import Style from "./ContactForm.module.css";
 
 const addContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -49,24 +49,28 @@ export default function ContactForm({ onAddContact }) {
       validationSchema={addContactSchema}
     >
       {({ setFieldValue }) => (
-        <Form>
-          <div>
-            <label htmlFor="name">Name</label>
-            <Field type="text" name="name" id="name" placeholder="Name" />
-            <ErrorMessage name="name" component="span" />
+        <Form className={Style.contactForm}>
+          <div className={Style.contactFormContainer}>
+            <div className={Style.formInput}>
+              <label htmlFor="name">Name</label>
+              <Field type="text" name="name" id="name" placeholder="Name" />
+              <ErrorMessage name="name" component="span" />
+            </div>
+            <div className={Style.formInput}>
+              <label htmlFor="number">Number</label>
+              <Field
+                type="text"
+                name="number"
+                id="number"
+                placeholder="000-00-00"
+                onChange={(event) => handleNumChange(event, setFieldValue)}
+              />
+              <ErrorMessage name="number" component="span" />
+            </div>
+            <button type="submit" className={Style.formButton}>
+              Add Contact
+            </button>
           </div>
-          <div>
-            <label htmlFor="number">Number</label>
-            <Field
-              type="text"
-              name="number"
-              id="number"
-              placeholder="000-00-00"
-              onChange={(event) => handleNumChange(event, setFieldValue)}
-            />
-            <ErrorMessage name="number" component="span" />
-          </div>
-          <button type="submit">Add Contact</button>
         </Form>
       )}
     </Formik>

@@ -7,13 +7,23 @@ export default function Contact({ contact, deleteContact }) {
       <div className={Style.contactContainer}>
         <div>
           <h2 className={Style.contactName}>
-            <svg height="16" width="16" fill="#ffffff">
+            <svg
+              className={Style.contactSvg}
+              height="16"
+              width="16"
+              fill="#ffffff"
+            >
               <use href="../../assets/person.svg"></use>
             </svg>
             {contact.name}
           </h2>
           <p className={Style.contactNumber}>
-            <svg height="16" width="16" fill="#ffffff">
+            <svg
+              className={Style.contactSvg}
+              height="16"
+              width="16"
+              fill="#ffffff"
+            >
               <use href="../../assets/phone.svg"></use>
             </svg>
             {contact.number}
