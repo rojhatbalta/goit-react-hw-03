@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
-import "./Searchbox.module.css";
+import Style from "./Searchbox.module.css";
 
 export default function SearchBox({ handleSearch, search }) {
   return (
-    <div className="searchContainer">
+    <div className={Style.searchContainer}>
       <p>Find contacts by name</p>
-      <input type="search" value={search} onChange={handleSearch} />
+      <input
+        type="search"
+        placeholder="None"
+        value={search}
+        onChange={handleSearch}
+      />
     </div>
   );
 }

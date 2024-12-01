@@ -52,7 +52,7 @@ export default function ContactForm({ onAddContact }) {
         <Form>
           <div>
             <label htmlFor="name">Name</label>
-            <Field type="text" name="name" id="name" />
+            <Field type="text" name="name" id="name" placeholder="Name" />
             <ErrorMessage name="name" component="span" />
           </div>
           <div>
@@ -61,6 +61,7 @@ export default function ContactForm({ onAddContact }) {
               type="text"
               name="number"
               id="number"
+              placeholder="000-00-00"
               onChange={(event) => handleNumChange(event, setFieldValue)}
             />
             <ErrorMessage name="number" component="span" />

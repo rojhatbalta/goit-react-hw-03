@@ -3,6 +3,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import SearchBox from "./components/SearchBox/SearchBox";
 import ContactList from "./components/ContactList/ContactList";
 import data from "./data.json";
+import Style from "./App.module.css";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -35,8 +36,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Phonebook</h1>
+      <h1>Phonebook</h1>
+      <div className={Style.appContainer}>
         <ContactForm onAddContact={addContact} />
         <SearchBox search={search} handleSearch={handleSearch} />
         <ContactList
