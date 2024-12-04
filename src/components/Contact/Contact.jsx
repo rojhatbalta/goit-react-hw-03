@@ -13,7 +13,7 @@ export default function Contact({ contact, deleteContact }) {
               width="16"
               fill="#ffffff"
             >
-              <use href="../../assets/person.svg"></use>
+              <use href="../../assets/icons.svg#person"></use>
             </svg>
             {contact.name}
           </h2>
@@ -24,7 +24,7 @@ export default function Contact({ contact, deleteContact }) {
               width="16"
               fill="#ffffff"
             >
-              <use href="../../assets/phone.svg"></use>
+              <use href="../../assets/icons.svg#phone"></use>
             </svg>
             {contact.number}
           </p>
