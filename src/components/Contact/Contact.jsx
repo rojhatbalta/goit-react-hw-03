@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Style from "./Contact.module.css";
-import IconURL from "../../assets/icons.svg";
+import Icon from "./icons.svg";
 
 export default function Contact({ contact, deleteContact }) {
   return (
@@ -14,7 +14,7 @@ export default function Contact({ contact, deleteContact }) {
               height="16"
               fill="#fffff"
             >
-              <use href={IconURL + "#person"}></use>
+              <use href={Icon + "#person"}></use>
             </svg>
             <h2 className={Style.contactName}>{contact.name}</h2>
           </div>
@@ -25,7 +25,7 @@ export default function Contact({ contact, deleteContact }) {
               width="16"
               fill="#ffffff"
             >
-              <use href={IconURL + "#phone"}></use>
+              <use href={Icon + "#phone"}></use>
             </svg>
             <p className={Style.contactNumber}>{contact.number}</p>
           </div>

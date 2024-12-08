@@ -14,7 +14,11 @@
   flex-direction: row;
 }
 
-.contactName,
+.contactName {
+  margin: 0;
+  font-size: 22px;
+}
+
 .contactNumber {
   margin: 0;
 }
