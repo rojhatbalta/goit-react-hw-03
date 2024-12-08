@@ -9,13 +9,20 @@
   padding: 15px;
 }
 
+.contactItem {
+  display: flex;
+  flex-direction: row;
+}
+
 .contactName,
 .contactNumber {
   margin: 0;
 }
 
 .contactSvg {
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
+  padding: 4px;
+  margin-top: 4px;
   fill: #ffffff;
 }
