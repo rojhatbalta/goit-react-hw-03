@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Style from "./Contact.module.css";
-import Icon from "./icons.svg";
+import IconPerson from "../Icons/IconPerson";
+import IconPhone from "../Icons/IconPhone";
 
 export default function Contact({ contact, deleteContact }) {
   return (
@@ -8,25 +9,11 @@ export default function Contact({ contact, deleteContact }) {
       <div className={Style.contactContainer}>
         <div>
           <div className={Style.contactItem}>
-            <svg
-              className={Style.contactSvg}
-              width="16"
-              height="16"
-              fill="#fffff"
-            >
-              <use href={Icon + "#person"}></use>
-            </svg>
-            <h2 className={Style.contactName}>{contact.name}</h2>
+            <IconPerson />
+            <p className={Style.contactName}>{contact.name}</p>
           </div>
           <div className={Style.contactItem}>
-            <svg
-              className={Style.contactSvg}
-              height="16"
-              width="16"
-              fill="#ffffff"
-            >
-              <use href={Icon + "#phone"}></use>
-            </svg>
+            <IconPhone />
             <p className={Style.contactNumber}>{contact.number}</p>
           </div>
         </div>

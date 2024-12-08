@@ -14,19 +14,12 @@
   flex-direction: row;
 }
 
-.contactName {
+.contactName,
+.contactNumber {
   margin: 0;
   font-size: 22px;
 }
 
-.contactNumber {
-  margin: 0;
-}
-
-.contactSvg {
-  height: 20px;
-  width: 20px;
-  padding: 4px;
-  margin-top: 4px;
-  fill: #ffffff;
+.contactName {
+  font-weight: 700;
 }
